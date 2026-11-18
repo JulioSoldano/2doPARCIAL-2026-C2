@@ -1,13 +1,23 @@
 class Biblioteca
     def __init__(self):
+        self.canciones = {}
+        self.canciones[cancion.id] = cancion
+    def agregar(self, cancion):
+        self.canciones[cancion.id] = cancion    
+    def cantidad(self):
+        return len(self.canciones)
+    def obtener(self, id):
+    try:
+        return self.canciones[id]
+    except KeyError:
+        raise CancionNoEncontradaError(f"No se encontró la canción con id {id}")
+
+    def listar(self):
+        return [str(cancion) for cancion in self.canciones.values()]
+    
+    def __iter__(self):
+        return iter(self.canciones.values())
 
 
-Ejercicio 2 — Biblioteca (8 pts)
-Definir la clase Biblioteca, el catálogo de todas las canciones.
-•	agregar(cancion) incorpora una canción.
-•	cantidad() devuelve cuántas hay.
-•	obtener(id) devuelve la canción con ese id. Si no está, lanza CancionNoEncontradaError.
-•	listar() devuelve una lista de strings, uno por canción, usando __str__.
-•	__iter__ permite recorrer las canciones con un for.
-La playlist no vive en esta clase.
-Teoría. En una o dos oraciones: qué guarda la biblioteca y qué guarda una playlist.
+#Teoría. En una o dos oraciones: qué guarda la biblioteca y qué guarda una playlist.
+#Rta: La Biblioteca guarda toda la informacion disponible, en cambio la playlist solo lo que nosotros elijamos repoducir.
