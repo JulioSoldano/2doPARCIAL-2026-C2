@@ -1,3 +1,5 @@
+Ejercicio 4 — Playlist sobre lista enlazada (14 pts)
+Implementar, con nodos propios:
 class Nodo:
     def __init__(self, dato, siguiente=None): ...
 
@@ -14,4 +16,8 @@ Definir Playlist, que guarda canciones en una ListaEnlazada. No tiene tope de ca
 •	quitar(id) saca la canción con ese id. Si no está en la playlist, lanza CancionNoEncontradaError.
 •	listar() devuelve los __str__ recorriendo el iterador de la lista.
 •	duracion_total() devuelve la suma de duracion_seg recorriendo el iterador. Playlist vacía: 0.
-Teoría. La lista solo guarda una referencia al primer nodo. ¿Cuántos nodos se recorren para insertar al final cuando ya hay n elementos?
+
+
+
+#Teoría. La lista solo guarda una referencia al primer nodo.
+# ¿Cuántos nodos se recorren para insertar al final cuando ya hay n elementos?
