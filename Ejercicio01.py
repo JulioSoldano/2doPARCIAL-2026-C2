@@ -13,12 +13,14 @@ class Cancion
         segundos = self.duracion % 60
         return f"{minutos}:{segundos:02d}"
 
-•	__str__ devuelve #12 Jijiji | Patricio Rey y sus Redonditos de Ricota | 1988 | 5:16.
-•	__eq__ compara por id.
 
 def __str__(self):
-        return f"{self.id} |({self.artista})| ({self.anio}| ({self.duracion_seg}
+        return f"{self.id}|({self.titulo})|({self.artista})| ({self.anio}| ({self.duracion_seg}
 
+	def __eq__(self, segundo_id):
+        if isinstance(segundo_id, Cancion):
+            return self.id == segundo_id.id
+        return False
 
 #Teoría. La duración se guarda en segundos enteros y duracion_mmss la calcula. 
 #Explicar en dos oraciones por qué conviene guardarla así y no en un string "5:16".
