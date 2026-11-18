@@ -1,5 +1,5 @@
 class Cancion
-    def __int__(self,id:int,titulo:str,artista:str, album:str, genero:str, anio:int,duracion_seg:int):
+    def __init__(self,id:int,titulo:str,artista:str, album:str, genero:str, anio:int,duracion_seg:int):
         self.id=id
         self.titulo=titulo
         self.artista=artista

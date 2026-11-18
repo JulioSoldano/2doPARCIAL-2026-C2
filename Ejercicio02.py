@@ -1,5 +1,5 @@
 class Biblioteca
-    def __int__(self):
+    def __init__(self):
 
 
 Ejercicio 2 — Biblioteca (8 pts)
